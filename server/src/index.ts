@@ -1,7 +1,9 @@
 // server/src/index.ts
 import express, { Request, Response } from 'express';
+import cors from 'cors';
 
 const app = express();
+app.use(cors());
 const PORT = process.env.PORT || 5000;
 
 app.get('/api', (req: Request, res: Response) => {
